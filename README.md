@@ -1,41 +1,43 @@
 # dsh-diagram
 
+简体中文 ｜ [English](README.en.md)
+
 [![npm version](https://img.shields.io/npm/v/@worktool/dsh-diagram?color=blue)](https://www.npmjs.com/package/@worktool/dsh-diagram)
 [![license](https://img.shields.io/npm/l/@worktool/dsh-diagram)](https://github.com/SupremeIdol/dsh-diagram/blob/main/LICENSE)
 [![DSH bundle](https://img.shields.io/badge/DSH-bundle-5b8def)](https://github.com/SupremeIdol/dsh-diagram)
 
-Render beautiful box-and-arrow diagrams directly in [DeepSeek Harness (DSH)](https://github.com/deepseek-ai/deepseek-harness) chat — no images, just clean vector SVG.
+在 [DeepSeek Harness（DSH）](https://github.com/deepseek-ai/deepseek-harness) 聊天里直接渲染精美的「方框 + 箭头」示意图 —— 不是图片，而是清爽的矢量 SVG。
 
-It registers two fenced-code languages in the chat:
+它在聊天中注册了两种代码围栏语言：
 
-- ` ```diagram ` — a small JSON spec that becomes a rounded, colored, labelled box-and-arrow diagram.
-- ` ```svg ` — raw SVG, sanitized and inlined.
+- ` ```diagram ` —— 一段小 JSON 规格，渲染成圆角、彩色、带标签的方框箭头图。
+- ` ```svg ` —— 原始 SVG，经安全过滤后内联。
 
-## Preview
+## 效果预览
 
-SNAT — the source address is rewritten as the packet leaves:
+SNAT —— 数据包出去时改写源地址：
 
-![SNAT diagram](https://raw.githubusercontent.com/SupremeIdol/dsh-diagram/main/assets/preview-snat.png)
+![SNAT 示意](https://raw.githubusercontent.com/SupremeIdol/dsh-diagram/main/assets/preview-snat.png)
 
-DNAT — the destination address is rewritten as the packet arrives:
+DNAT —— 数据包进来时改写目的地址：
 
-![DNAT diagram](https://raw.githubusercontent.com/SupremeIdol/dsh-diagram/main/assets/preview-dnat.png)
+![DNAT 示意](https://raw.githubusercontent.com/SupremeIdol/dsh-diagram/main/assets/preview-dnat.png)
 
-## Install
+## 安装
 
-In DSH: **Plugins → Add plugin**, enter the package name:
+在 DSH 中：**Plugins → Add plugin**，输入包名：
 
 ```
 @worktool/dsh-diagram
 ```
 
-or from the CLI / tool: `plugin_manager install_bundle` with target `@worktool/dsh-diagram`.
+或在 CLI / 工具里：`plugin_manager install_bundle`，target 填 `@worktool/dsh-diagram`。
 
-Requires a DSH version matching `engines.dsh`.
+需要与 `engines.dsh` 匹配的 DSH 版本。
 
-## Usage
+## 用法
 
-Minimal (auto colors, index-based links):
+最简写法（自动配色、用下标连接节点与连线）：
 
 ````markdown
 ```diagram
@@ -43,7 +45,7 @@ Minimal (auto colors, index-based links):
 ```
 ````
 
-With sublabels:
+带副标签：
 
 ````markdown
 ```diagram
@@ -51,16 +53,16 @@ With sublabels:
 ```
 ````
 
-### Spec
+### 规格
 
-- `direction`: `"row"` (default) or `"column"`
-- `title`: optional heading
-- `nodes`: array of `{ id?, label, sublabel?, tone? }` — or plain strings (`[label, ...]`)
-- `links`: array of `{ from, to, tone?, forward?, backward? }` — or `[from, to, forward?, backward?, tone?]`
-- `tone`: `blue | orange | green | gray | purple | red` (omitted → auto-picked per node index)
+- `direction`：`"row"`（默认，横向）或 `"column"`（纵向）
+- `title`：可选标题
+- `nodes`：`{ id?, label, sublabel?, tone? }` 数组 —— 也可直接写字符串数组 `[label, ...]`
+- `links`：`{ from, to, tone?, forward?, backward? }` 数组 —— 也可写 `[from, to, forward?, backward?, tone?]`
+- `tone`：`blue | orange | green | gray | purple | red`（省略则按节点下标自动取色）
 
-If `backward` is present a bidirectional arrow pair is drawn (forward on top, backward below). Invalid JSON or a streaming block falls back to the plain code block.
+带 `backward` 时画一对双向箭头（forward 在上、backward 在下）。JSON 非法、或处于流式输出时，回退为原始代码块。
 
-## License
+## 许可证
 
 MIT
