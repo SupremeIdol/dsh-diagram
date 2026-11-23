@@ -1,6 +1,6 @@
 {
   "name": "@worktool/dsh-diagram",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Render beautiful box-and-arrow diagrams from fenced diagram/svg code blocks in DSH chat.",
   "type": "module",
   "license": "MIT",
