@@ -12,10 +12,10 @@ It registers two fenced-code languages in the chat:
 In DSH: **Plugins → Add plugin**, enter the package name:
 
 ```
-@your-npm-name/dsh-diagram
+@worktool/dsh-diagram
 ```
 
-or from the CLI / tool: `plugin_manager install_bundle` with target `@your-npm-name/dsh-diagram`.
+or from the CLI / tool: `plugin_manager install_bundle` with target `@worktool/dsh-diagram`.
 
 Requires a DSH version matching `engines.dsh`.
 

@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "title": {
+    "en": "SupremeIdol DSH Plugins",
+    "zh": "SupremeIdol DSH 插件"
+  },
+  "description": {
+    "en": "DSH bundle plugins by SupremeIdol.",
+    "zh": "SupremeIdol 的 DSH 插件集合。"
+  },
+  "metadata": {
+    "categories": {
+      "diagram": {
+        "title": {
+          "en": "Diagrams",
+          "zh": "图表"
+        }
+      }
+    },
+    "labels": {
+      "official": {
+        "title": {
+          "en": "Official",
+          "zh": "官方"
+        }
+      }
+    },
+    "sortKeys": {
+      "stars": {
+        "title": {
+          "en": "Stars",
+          "zh": "星标"
+        },
+        "order": "desc"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "@worktool/dsh-diagram",
+      "title": {
+        "en": "Diagram Renderer",
+        "zh": "图表渲染"
+      },
+      "description": {
+        "en": "Render box-and-arrow diagrams from diagram/svg fenced code blocks in DSH chat.",
+        "zh": "在 DSH 聊天中把 diagram/svg 代码围栏渲染成方框+箭头图表。"
+      },
+      "icon": "https://raw.githubusercontent.com/SupremeIdol/dsh-diagram/main/icon.svg",
+      "author": "SupremeIdol",
+      "homepage": "https://github.com/SupremeIdol/dsh-diagram#readme",
+      "repository": {
+        "url": "https://github.com/SupremeIdol/dsh-diagram"
+      },
+      "metadata": {
+        "category": "diagram",
+        "keywords": [
+          "diagram",
+          "svg",
+          "flowchart",
+          "dsh-plugin"
+        ],
+        "labels": [
+          "official"
+        ],
+        "sortKeys": {
+          "stars": 0
+        }
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1795401959,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {
+            "dsh": ">=0.2.0-0 <0.3.0"
+          }
+        }
+      ]
+    }
+  ]
+}

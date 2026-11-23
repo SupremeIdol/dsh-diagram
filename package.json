@@ -1,5 +1,5 @@
 {
-  "name": "@supremeidol/dsh-diagram",
+  "name": "@worktool/dsh-diagram",
   "version": "1.0.0",
   "description": "Render beautiful box-and-arrow diagrams from fenced diagram/svg code blocks in DSH chat.",
   "type": "module",

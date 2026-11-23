@@ -1,10 +1,10 @@
-// Client half of @supremeidol/dsh-diagram.
+// Client half of @worktool/dsh-diagram.
 // Registers two layers on the session-scoped `conversation.chat.markdown.fence`
 // HOC slot: one for ```diagram (structured JSON -> styled SVG) and one for
 // ```svg (pass-through raw SVG). Pure React + SVG, no external dependencies.
 
 window.__ModuleLoader__.load({
-  id: '@supremeidol/dsh-diagram',
+  id: '@worktool/dsh-diagram',
   factory(require) {
     const React = require('react')
     const e = React.createElement
@@ -263,13 +263,13 @@ window.__ModuleLoader__.load({
       apply(ctx) {
         ctx.slots.inject('conversation.chat.markdown.fence', function () {
           return ctx.slots.register(
-            { name: 'conversation.chat.markdown.fence', key: 'diagram', id: '@supremeidol/dsh-diagram/fence/diagram' },
+            { name: 'conversation.chat.markdown.fence', key: 'diagram', id: '@worktool/dsh-diagram/fence/diagram' },
             DiagramLayer,
           )
         })
         ctx.slots.inject('conversation.chat.markdown.fence', function () {
           return ctx.slots.register(
-            { name: 'conversation.chat.markdown.fence', key: 'svg', id: '@supremeidol/dsh-diagram/fence/svg' },
+            { name: 'conversation.chat.markdown.fence', key: 'svg', id: '@worktool/dsh-diagram/fence/svg' },
             SvgLayer,
           )
         })
