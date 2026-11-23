@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Diagram renderer">
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="#eef4ff" stroke="#c7d7f5" stroke-width="2"/>
+  <rect x="9" y="22" width="16" height="20" rx="5" fill="#dbe8fd" stroke="#6b93e0" stroke-width="2"/>
+  <rect x="39" y="22" width="16" height="20" rx="5" fill="#fde3c9" stroke="#e69138" stroke-width="2"/>
+  <line x1="26" y1="28" x2="38" y2="28" stroke="#4a86e8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M35 25 L39 28 L35 31" fill="none" stroke="#4a86e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="38" y1="36" x2="26" y2="36" stroke="#e69138" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M29 33 L25 36 L29 39" fill="none" stroke="#e69138" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

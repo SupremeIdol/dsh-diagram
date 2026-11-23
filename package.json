@@ -1,0 +1,61 @@
+{
+  "name": "@supremeidol/dsh-diagram",
+  "version": "1.0.0",
+  "description": "Render beautiful box-and-arrow diagrams from fenced diagram/svg code blocks in DSH chat.",
+  "type": "module",
+  "license": "MIT",
+  "author": "SupremeIdol",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "diagram",
+    "svg",
+    "flowchart"
+  ],
+  "homepage": "https://github.com/SupremeIdol/dsh-diagram#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SupremeIdol/dsh-diagram.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SupremeIdol/dsh-diagram/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0-0 <0.3.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-client-ui-chat": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-client-ui-chat": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-chat"
+      ]
+    }
+  }
+}

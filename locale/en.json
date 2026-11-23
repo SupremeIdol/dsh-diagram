@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Diagram Renderer",
+    "description": "Render box-and-arrow diagrams from fenced diagram or svg code blocks in chat."
+  }
+}

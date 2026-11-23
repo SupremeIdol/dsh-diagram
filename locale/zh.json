@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "图表渲染",
+    "description": "把聊天中的 diagram / svg 代码块渲染成精美的方框箭头图。"
+  }
+}
